@@ -1,0 +1,28 @@
+const employee = [];
+function mintNFT (emp_id,name,gender,date_of_birth,desig,salary) {
+    const employee_details = {
+        "EmpID": emp_id,
+        "Emp_Name": name,
+        "Gender": gender,
+        "Date_of_Birth": date_of_birth,
+        "Designation": desig,
+        "Salary": salary,
+    }
+    employee.push(employee_details);
+    console.log("employee details is successfully added.");
+}
+function listNFTs () {
+    for(let i = 0; i < employee.length; i++) {
+        console.log(employee[i]);
+    }
+}
+function getTotalSupply() {
+    console.log("Total No. of employee : " + employee.length);
+}
+mintNFT("D01","Anamika Kumari","F","28 July 2002","Manager","80000");
+mintNFT("D02","Karan Kumar","M","15 Jan 2001","Senior HR","100000");
+mintNFT("D03","Jyoti Kumari Gorai","F","11 Jan 2003","HR Consultant","80000");
+mintNFT("D04","Puja Gorai","F","01 Jan 2000","Web Developer","70000");
+mintNFT("D05","Om Gorai","M","23 Feb 1995","Data Analyst","400000");
+listNFTs();
+getTotalSupply();
